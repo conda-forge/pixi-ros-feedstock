@@ -1,20 +1,20 @@
 context:
-  version: 0.2.0
+  version: "0.3.0"
 
 package:
   name: pixi-ros
   version: ${{ version }}
 
 source:
-- url: https://pypi.org/packages/source/p/pixi-ros/pixi_ros-${{ version }}.tar.gz
-  sha256: 43e8254f3b790875b185a6a5c065c0a7eae3905ceb3017cbb87bc809e3064722
+  - url: https://pypi.org/packages/source/p/pixi-ros/pixi_ros-${{ version }}.tar.gz
+    sha256: e9a2d92f7a33618801a14bff6d3c50997d43f377a0e68fa9dc8780abaee078c6
 
 build:
   number: 0
   script: ${{ PYTHON }} -m pip install .
   python:
     entry_points:
-    - pixi-ros = pixi_ros.cli:main
+      - pixi-ros = pixi_ros.cli:main
   noarch: python
 
 requirements:
@@ -33,11 +33,11 @@ requirements:
     - typer >=0.12.0
 
 tests:
-- python:
-    python_version: ${{ python_min }}.*
-    imports:
-    - pixi_ros
-    pip_check: true
+  - python:
+      python_version: ${{ python_min }}.*
+      imports:
+        - pixi_ros
+      pip_check: true
 
 about:
   summary: Pixi extension for ROS package management
@@ -156,4 +156,4 @@ about:
 
 extra:
   recipe-maintainers:
-  - ruben-arts
+    - ruben-arts
