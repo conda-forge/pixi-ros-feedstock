@@ -1,5 +1,5 @@
 context:
-  version: "0.4.0"
+  version: "0.5.0"
 
 package:
   name: pixi-ros
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/p/pixi-ros/pixi_ros-${{ version }}.tar.gz
-    sha256: c0b565a212278a45f7e94bdb0d05c13eb5d8404e7029e9c63aded9a3aaa10433
+    sha256: e3b4afa97a8d4073f892de03b8d3b7790e114f0befd8a422ee8d525fb331988e
 
 build:
   number: 0
